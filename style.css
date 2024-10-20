@@ -62,6 +62,7 @@ background-color: #a6e8e6;
 letter-spacing: 4px;
 color: #505050;
 }
+
 .btn-search{
     display: flex;
     justify-content: space-between;
@@ -72,13 +73,21 @@ color: #505050;
 table{
     width: 100%;
     text-align: center;
-    margin: 10px 0;
+    margin: 20px 0;
+    /* border-collapse: collapse; */
+
 }
 table th{
     text-transform: uppercase;
 }
 th,td{
     padding: 5px;
+    /* border-right: 1px solid #000;  */
+    /* Adds a line between columns */
+
+}
+#update,#delete{
+    letter-spacing: unset;
 }
 /* #FF7260 بمبي
 

@@ -19,15 +19,15 @@
         <div class="inputs">
             <input placeholder="title" type="text"id="title">
             <div class="price">
-                <input placeholder="price" type="number"id="price">
-                <input placeholder="taxes" type="number"id="taxes">
-                <input placeholder="adds" type="number"id="adds">
-                <input placeholder="discount" type="number"id="discount">
-                <small class='too'id="total">1234</small>
+                <input onkeyup="getTotal()"  placeholder="price" type="number" id="price">
+                <input onkeyup="getTotal()" placeholder="taxes" type="number"id="taxes">
+                <input onkeyup="getTotal()" placeholder="adds" type="number"id="adds">
+                <input onkeyup="getTotal()" placeholder="discount" type="number"id="discount">
+                <small class='too'id="total"></small>
             </div>
             <input placeholder="count" type="number"id="count">
             <input placeholder="category" type="number"id="category">
-            <button id="create">create</button>
+            <button id="submit">create</button>
 
         </div>
         <div class="outputs">
@@ -71,3 +71,5 @@
     <script src="./main.js"></script>
 </body>
 </html>
+
+<!-- onkeyup simply listens for any key press and triggers the function, whether the user enters or deletes a value. So, it’s possible that during typing or erasing, some input fields might become empty, and the function still gets triggered. That’s why it's important to handle empty values, to avoid errors like NaN. -->
