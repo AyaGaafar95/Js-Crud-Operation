@@ -10,6 +10,8 @@ let submit = document.getElementById('submit');
 
 // console.log(title,price,taxes,adds,discount,total,count,category,submit);
 
+// TODO: get total 
+
 function getTotal() {
     if(price.value != '' ){
         let result = (+price.value + +taxes.value + +adds.value) - +discount.value ;
@@ -21,8 +23,28 @@ function getTotal() {
     
     
 }
-// get total 
-// create Product
+
+// TODO: create Product
+
+ let dataPro = [];
+ submit.onclick = function(){
+    let product ={
+        title : title.value ,
+        price : price.value,
+        taxes : taxes.value,
+        adds : adds.value,
+        discount : discount.value,
+        total: total.innerHTML,
+        count :count.value ,
+        category : category.value
+
+    }
+    console.log(product);
+    
+ }
+
+
+
 // save localstorage
 // clear inputs 
 // read 
