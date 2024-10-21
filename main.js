@@ -25,8 +25,12 @@ function getTotal() {
 }
 
 // TODO: create Product
+let allproductsArray = [];
+if(localStorage.product != null){
+allproductsArray = JSON.parse(localStorage.product);
+}
 
- let dataPro = [];
+
  submit.onclick = function(){
     let product ={
         title : title.value ,
@@ -39,15 +43,30 @@ function getTotal() {
         category : category.value
 
     }
-    console.log(product);
-    
+    // save localstorage
+allproductsArray.push(product);
+localStorage.setItem('product', JSON.stringify(allproductsArray)) // TODO: converts the allproductsArray into a JSON string... Since localStorage can only store strings,
+    console.log(allproductsArray);
+    clearInputsData()
  }
 
-
-
-// save localstorage
 // clear inputs 
-// read 
+function clearInputsData(){
+    title.value ='';
+    price.value = '';
+     taxes.value = '';
+    adds.value = '';
+    discount.value ='';
+  total.innerHTML='';
+ count.value = '' ;
+ category.value =''
+}
+
+// read or show in table after ctreate
+
+
+
+
 // count 
 // delete 
 // update
