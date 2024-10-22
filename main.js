@@ -47,7 +47,8 @@ allproductsArray = JSON.parse(localStorage.product);
 allproductsArray.push(product);
 localStorage.setItem('product', JSON.stringify(allproductsArray)) // TODO: converts the allproductsArray into a JSON string... Since localStorage can only store strings,
     console.log(allproductsArray);
-    clearInputsData()
+    clearInputsData();
+
  }
 
 // clear inputs 
@@ -64,8 +65,30 @@ function clearInputsData(){
 
 // read or show in table after ctreate
 
+function showDataOnTable(){
+    let table = '';
+    for(i =0 ; i < allproductsArray.length  ; i++){
+         table +=`<tr>
+                    <td>${i}</td>
+                    <td>${allproductsArray[i].title}</td>
+                    <td>${allproductsArray[i].price}</td>
+                    <td>${allproductsArray[i].taxes}</td>
+                    <td>${allproductsArray[i].adds}</td>
+                    <td>${allproductsArray[i].discount}</td>
+                    <td>${allproductsArray[i].total}</td>
+                    <td>${allproductsArray[i].count}</td>
+                    <td>${allproductsArray[i].category}</td>
+                    <td><button id="update">update</button></td>
+                    <td><button id="delete">delete</button></td>
+                </tr>`
+                console.log(table);
+                
+    }
 
+    document.getElementById('tbody').innerHTML= table
+}
 
+showDataOnTable();
 
 // count 
 // delete 
