@@ -89,6 +89,11 @@ th,td{
 #update,#delete{
     letter-spacing: unset;
 }
+
+#deleteAll{
+    margin: 20px;
+
+}
 /* #FF7260 بمبي
 
 #9BD7D5 لبنى
